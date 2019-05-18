@@ -1,0 +1,23 @@
+{
+    "name": "@yannickfricke/insanedisk",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Yannick Fricke <yannickfricke@googlemail.com>",
+    "license": "MIT",
+    "scripts": {
+        "commit": "git-cz"
+    },
+    "devDependencies": {
+        "commitizen": "^3.1.1",
+        "cz-conventional-changelog": "^2.1.0",
+        "jest": "^24.8.0",
+        "ts-jest": "^24.0.2",
+        "tslint": "^5.16.0",
+        "typescript": "^3.4.5"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}
