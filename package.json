@@ -8,6 +8,8 @@
         "build": "tsc",
         "build:watch": "tsc --watch",
         "commit": "git-cz",
+        "test": "jest",
+        "test:watch": "jest --watch"
     },
     "devDependencies": {
         "@types/jest": "^24.0.13",
