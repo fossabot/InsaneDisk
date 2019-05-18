@@ -1,6 +1,7 @@
 {
     "name": "@yannickfricke/insanedisk",
     "version": "0.0.0",
+    "private": false,
     "files": [
         "./dist/"
     ],
