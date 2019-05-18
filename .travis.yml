@@ -5,7 +5,6 @@ cache:
 notifications:
   email: false
 node_js:
-- '10'
 - '11'
 - '8'
 jobs:
@@ -16,8 +15,7 @@ jobs:
         - npm run build
     - stage: deploy
       script:
-        - npm i -g travis-deploy-once
-        - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npx travis-deploy-once "npm run release"; fi
+        - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run release; fi
 after_success:
 # - npm run travis-deploy-once "npm run report-coverage"
 # - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm
