@@ -5,7 +5,9 @@
     "author": "Yannick Fricke <yannickfricke@googlemail.com>",
     "license": "MIT",
     "scripts": {
-        "commit": "git-cz"
+        "build": "tsc",
+        "build:watch": "tsc --watch",
+        "commit": "git-cz",
     },
     "devDependencies": {
         "@types/jest": "^24.0.13",
