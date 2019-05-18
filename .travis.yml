@@ -8,6 +8,8 @@ node_js:
 - '10'
 - '11'
 - '8'
+before_script:
+- npm i -g travis-deploy-once
 script:
 - npm run test && npm run build
 after_success:
