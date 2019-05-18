@@ -8,12 +8,18 @@
         "build": "tsc",
         "build:watch": "tsc --watch",
         "commit": "git-cz",
+        "lint": "tslint --project ./tsconfig.json",
+        "lint:fix": "tslint --fix --project ./tsconfig.json",
+        "lint:watch": "chokidar './src/**/*.ts' -c 'node -e \"console.clear()\" && yarn lint' --initial",
+        "lint:fix:watch": "chokidar './src/**/*.ts' -c 'node -e \"console.clear()\" && yarn lint:fix' --initial",
+        "release": "semantic-release",
         "test": "jest",
         "test:watch": "jest --watch"
     },
     "devDependencies": {
         "@types/jest": "^24.0.13",
         "@types/node": "^12.0.2",
+        "chokidar-cli": "^1.2.2",
         "commitizen": "^3.1.1",
         "cz-conventional-changelog": "^2.1.0",
         "husky": "^2.3.0",
