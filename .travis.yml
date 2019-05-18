@@ -15,6 +15,7 @@ jobs:
         - npm run build
     - stage: deploy
       script:
+        - git fetch --all --tags
         - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run release; fi
 branches:
   except:
