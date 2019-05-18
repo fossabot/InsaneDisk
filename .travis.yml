@@ -16,7 +16,7 @@ jobs:
     - stage: deploy
       script:
         - git fetch --all --tags
-        - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run release; fi
+        - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run release --access public; fi
 branches:
   except:
   - "/^v\\d+\\.\\d+\\.\\d+$/"
