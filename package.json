@@ -16,9 +16,11 @@
         "lint:watch": "chokidar './src/**/*.ts' -c 'node -e \"console.clear()\" && yarn lint' --initial",
         "lint:fix:watch": "chokidar './src/**/*.ts' -c 'node -e \"console.clear()\" && yarn lint:fix' --initial",
         "release": "yarn semantic-release",
-        "postrelease": "npm run test --collectCoverage --coverageReporters=text-lcov | coveralls",
+        "postrelease": "npm run test:withcc --coverageReporters=text-lcov | coveralls",
         "test": "jest",
-        "test:watch": "jest --watch"
+        "test:withcc": "jest --collectCoverage",
+        "test:watch": "jest --watch",
+        "test:withcc:watch": "jest --watch --collectCoverage"
     },
     "devDependencies": {
         "@semantic-release/commit-analyzer": "^6.1.0",
