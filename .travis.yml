@@ -17,6 +17,8 @@ jobs:
     - stage: deploy
       script:
         - git fetch --all --tags
+        - if [ "$TRAVIS_BRANCH" = "develop" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm i -g coveralls; fi
+        - if [ "$TRAVIS_BRANCH" = "develop" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run test:withcc -- --coverageReporters=text-lcov | coveralls; fi
         - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run release --access public; fi
 branches:
   except:
